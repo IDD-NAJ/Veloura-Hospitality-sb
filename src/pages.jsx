@@ -3,6 +3,7 @@ import { Ic, Stars, Magnetic, Particles, useInView, useParallax, useCounter } fr
 import { SearchBar, HotelCard } from "./components.jsx";
 import DestVisual from "./DestVisual.jsx";
 import { authAPI, hotelsAPI, bookingsAPI, statsAPI } from "./api.js";
+import logoImg from './images/freepik__create-favicon-for-hospitality-website-veloura-sty__31023.png';
 
 // ─── Animated trust-strip counters ─────────────────────────────────────────
 const TrustCounters = ({ stats }) => {
@@ -297,24 +298,7 @@ export const HomePage = ({ navigate, wishlist, onWishlist }) => {
 
       {/* CTA */}
       <section style={{ padding: "100px 28px", textAlign: "center", position: "relative", overflow: "hidden" }}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center"
-          }}
-        >
-          <source src="/src/images/6005532_Receptionist_Woman_3840x2160.mp4" type="video/mp4" />
-        </video>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(15,25,35,0.85) 0%, rgba(26,51,82,0.75) 50%, rgba(15,25,35,0.9) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(15,25,35,0.95) 0%, rgba(26,51,82,0.85) 50%, rgba(15,25,35,0.95) 100%)" }} />
         <Particles count={20} />
         {[300, 450, 620].map((size, i) => (
           <div key={i} style={{ position: "absolute", top: "50%", left: "50%", width: size, height: size, marginTop: -size / 2, marginLeft: -size / 2, borderRadius: "50%", border: "1px solid rgba(201,168,76,.07)", animation: `pulseFast ${4 + i}s ease-in-out ${i * 0.8}s infinite`, pointerEvents: "none" }} />
@@ -1094,7 +1078,7 @@ export const AuthModal = ({ mode: initMode, onClose, onSuccess }) => {
       <div className="modal-box">
         <div style={{ padding: "28px 28px 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <img src="/src/images/freepik__create-favicon-for-hospitality-website-Veloura-sty__31023.png" alt="Veloura Logo" style={{ width: 32, height: 32, objectFit: "contain" }} />
+            <img src={logoImg} alt="Veloura Logo" style={{ width: 32, height: 32, objectFit: "contain" }} />
             <div style={{ fontFamily: "var(--serif)", fontSize: "1.15rem", fontWeight: 500, color: "var(--navy)" }}>Veloura</div>
           </div>
           <button onClick={onClose} style={{ background: "rgba(0,0,0,.04)", border: "none", borderRadius: "50%", width: 34, height: 34, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}><Ic n="close" s={16} c="var(--slate)" /></button>

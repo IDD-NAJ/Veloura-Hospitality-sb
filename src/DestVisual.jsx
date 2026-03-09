@@ -1,18 +1,22 @@
+import parisImg from './images/paris.jpg';
+import santoriniImg from './images/santorini.jpg';
+import tokyoImg from './images/tokyo.jpg';
+
 const DestVisual = ({ name, w = "100%", h = "100%" }) => {
   const key = (name || "").toLowerCase().replace(/\s/g, "");
   const images = {
     paris: {
-      src: "/src/images/paris.jpg",
+      src: parisImg,
       alt: "Paris luxury hotel with Eiffel Tower view",
       gradient: "linear-gradient(135deg, rgba(26,51,82,0.4) 0%, rgba(42,90,138,0.3) 50%, rgba(15,25,35,0.5) 100%)"
     },
     santorini: {
-      src: "/src/images/santorini.jpg", 
+      src: santoriniImg, 
       alt: "Santorini cliffside hotel with caldera view",
       gradient: "linear-gradient(135deg, rgba(13,42,58,0.4) 0%, rgba(26,74,107,0.3) 50%, rgba(30,80,120,0.5) 100%)"
     },
     tokyo: {
-      src: "/src/images/tokyo.jpg",
+      src: tokyoImg,
       alt: "Tokyo luxury hotel with city skyline view",
       gradient: "linear-gradient(135deg, rgba(26,10,6,0.4) 0%, rgba(74,26,10,0.3) 50%, rgba(40,20,10,0.5) 100%)"
     }

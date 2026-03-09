@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { Ic, Stars, Magnetic, Particles, useScrollDirection } from "./shared.jsx";
 import DestVisual from "./DestVisual.jsx";
+import logoImg from './images/freepik__create-favicon-for-hospitality-website-veloura-sty__31023.png';
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
 export const Navbar = ({ navigate, page, user, onLogin, onLogout }) => {
@@ -25,7 +26,7 @@ export const Navbar = ({ navigate, page, user, onLogin, onLogout }) => {
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 500, background: navBg, backdropFilter: scrolled || !isHeroPage ? "blur(16px)" : "none", borderBottom: `1px solid ${scrolled || !isHeroPage ? "rgba(255,255,255,.08)" : "transparent"}`, transition: "transform .4s var(--ease), background .4s var(--ease), border-color .4s", transform: navHidden ? "translateY(-100%)" : "translateY(0)" }}>
         <div style={{ maxWidth: 1380, margin: "0 auto", padding: "0 28px", display: "flex", alignItems: "center", height: 70, gap: 40 }}>
           <button onClick={() => navigate("home")} style={{ display: "flex", alignItems: "center", gap: 11, background: "none", border: "none", cursor: "pointer", flexShrink: 0 }}>
-            <img src="/src/images/freepik__create-favicon-for-hospitality-website-Veloura-sty__31023.png" alt="Veloura Logo" style={{ width: 36, height: 36, objectFit: "contain" }} />
+            <img src={logoImg} alt="Veloura Logo" style={{ width: 36, height: 36, objectFit: "contain" }} />
             <div>
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.25rem", fontWeight: 600, color: "#fff", letterSpacing: ".06em", lineHeight: 1 }}>Veloura</div>
               <div style={{ fontFamily: "var(--mono)", fontSize: ".56rem", color: "rgba(201,168,76,.8)", letterSpacing: ".2em", marginTop: 1 }}>LUXURY HOTELS</div>
@@ -118,7 +119,7 @@ export const Footer = ({ navigate }) => {
       <div style={{ maxWidth: 1380, margin: "0 auto", padding: "50px 28px 28px", display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 50 }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-            <img src="/src/images/freepik__create-favicon-for-hospitality-website-Veloura-sty__31023.png" alt="Veloura Logo" style={{ width: 32, height: 32, objectFit: "contain" }} />
+            <img src={logoImg} alt="Veloura Logo" style={{ width: 32, height: 32, objectFit: "contain" }} />
             <div style={{ fontFamily: "var(--serif)", fontSize: "1.2rem", color: "#fff" }}>Veloura</div>
           </div>
           <p style={{ fontSize: ".85rem", lineHeight: 1.85, color: "rgba(255,255,255,.4)", maxWidth: 260, marginBottom: 24 }}>Curating the world's finest hotel experiences since 2008. Over 12,000 properties across 180 countries.</p>
