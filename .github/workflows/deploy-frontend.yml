@@ -1,15 +1,16 @@
 name: Deploy Frontend to Vercel
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'index.html'
-      - 'vite.config.js'
-      - 'package.json'
-      - '.github/workflows/deploy-frontend.yml'
+  # Disabled until Vercel secrets are configured
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'src/**'
+  #     - 'index.html'
+  #     - 'vite.config.js'
+  #     - 'package.json'
+  #     - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
 jobs:

@@ -1,12 +1,13 @@
 name: Deploy Backend to Vercel
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'backend/**'
-      - '.github/workflows/deploy-backend.yml'
+  # Disabled until Vercel secrets are configured
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'backend/**'
+  #     - '.github/workflows/deploy-backend.yml'
   workflow_dispatch:
 
 jobs:
