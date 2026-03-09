@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veloura Admin Dashboard</title>
+  <style>
+    :root {
+      --bg: #0a0a0a; --surface: #111; --card: #1a1a1a; --border: #2a2a2a; --border2: #333;
+      --text: #f5f5f5; --text2: #aaa; --text3: #666; --gold: #D4A843; --gold-dk: #b8941f;
+      --teal: #2DD4BF; --teal-dim: rgba(45,212,191,.1); --blue: #60A5FA; --red: #EF4444;
+      --green: #22C55E; --purple: #A78BFA; --mono: 'Courier New', monospace;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --serif: Georgia, serif;
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); }
+  </style>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/recharts@2.12.7/dist/Recharts.min.js"></script>
+  <script type="text/babel" src="hotel-admin.jsx"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { createElement } = React;
+    const { createRoot } = ReactDOM;
+    createRoot(document.getElementById("root")).render(createElement(HotelAdminApp));
+  </script>
+</body>
+</html>
